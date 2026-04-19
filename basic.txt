@@ -1,0 +1,40 @@
+Javascript
+----------
+HTML - SKELETON 
+CSS  - style (mass)
+JS   - logic 
+
+script tag
+<script><script>
+
+internal js and external js 
+
+to run js in console  node js needs to be installed in your system
+
+
+HTML - single page 
+DOM - document object model
+html 
+    meta 
+    title
+body
+    h1
+    h2
+    p
+    form
+<=-=--===================================>
+Basic
+conditionals
+loop 
+array 
+string 
+json 
+jsonArray 
+DOM 
+    events 
+    eventsListener 
+
+Async JS 
+    promise
+    fetch 
+    async await 
