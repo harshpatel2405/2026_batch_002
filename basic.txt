@@ -15,13 +15,14 @@ to run js in console  node js needs to be installed in your system
 HTML - single page 
 DOM - document object model
 html 
-    meta 
-    title
-body
-    h1
-    h2
-    p
-    form
+    HEAD    
+        meta 
+        title
+    body
+        h1
+        h2
+        p
+        form
 <=-=--===================================>
 Basic
 conditionals
