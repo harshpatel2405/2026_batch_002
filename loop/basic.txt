@@ -1,0 +1,41 @@
+Loops
+-----
+Doing tasks repetitively 
+
+*Workflow*
+1. Initialization            only once 
+2. Conditional               till it gets false
+3. Operational parts         till the condition is true 
+4. Increment Decrement       till the condition is true 
+
+*types*
+1. Entry controlled loop
+    It first checks the condition, and then, if the condition is correct, then only it allows you to execute the logic. 
+
+    a. for 
+    for(Initialization; condition; Increment/Decrement)
+    {
+        // operational part / logic
+    }
+
+    b. while 
+    Initialization;
+    while( condition)
+    {
+        // operational part / logic
+        // Increment/Decrement
+    }
+
+2. exit controlled loop 
+    First, execute the logic and then check the Condition  
+
+    a. do..while 
+    Initialization;
+    do
+    {
+        // operational part / logic
+        // Increment/Decrement
+    }while( condition);
+
+
+    array(iterable) - for each 
