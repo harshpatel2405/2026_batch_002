@@ -1,0 +1,14 @@
+JSON 
+----
+Javascript object notation
+
+
+Key - value pair
+
+{
+    key : value, 
+    key: value , 
+    
+}
+
+why + does not works with json 
