@@ -39,3 +39,14 @@ console.log("Addition : " + sum);
 // * Task : make 3 employee json
 // * make 5 fields ,
 // * check which emloyee gets the highest salary , print the name of that employee
+
+// * make a json for shopping items , print final bill amount
+
+const shopping = {
+    name : "Bottle",
+    price : 1500,
+    qty : 3,
+}
+
+let finalBill = shopping.price * shopping.qty;
+console.log(finalBill)

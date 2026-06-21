@@ -1,0 +1,12 @@
+Function 
+--------
+function function_name(parameters)
+{
+    // logic
+}
+
+1. with return with args 
+2. with return without args
+3. without return with args
+4. without return without args
+
