@@ -1,0 +1,11 @@
+Array 
+-----
+Object 
+heterogeneous -- different data type
+iterable
+
+[]
+
+
+let arr = []
+let arr = 23
