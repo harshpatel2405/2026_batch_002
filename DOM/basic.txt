@@ -1,0 +1,35 @@
+DOM 
+---
+Document Object Model
+Tree STructure of HTML Page
+
+document
+|
+|- html
+|    |
+|    |- head
+|    |- body
+|    |    |
+|    |    |- h1
+|    |    |- p
+
+Acess element 
+add element
+remove element 
+modify element
+
+
+HTML -> 
+
+1. server fetches HTML File 
+2. Make DOM Structure of HTML File 
+3. css is read and applied
+4. js is read and applied
+5. browser paints the content on the screen
+
+
+1. getElementbyId
+2. getElementbyClass
+3. getElementbytagName
+4. querySelector
+5. querySelectorAll
