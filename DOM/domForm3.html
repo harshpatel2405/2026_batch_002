@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 380px;
+        }
+
+        form {
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid #334155;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        p {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            color: #e2e8f0;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            background: #0f172a;
+            color: white;
+            border: 1px solid #475569;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+            transition: .3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 10px rgba(59, 130, 246, .5);
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        input[type="button"]:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .links a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        ::placeholder {
+            color: #94a3b8;
+        }
+    </style> -->
+
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h1>Welcome back</h1>
+            <p>Login to Continue</p>
+            <label>Username</label>
+            <input type="text" id="uname">
+            <label>Password</label>
+            <input type="password" id="pwd">
+
+            <input type="button" value="Log In" onclick="login()">
+        </form>
+        <h3 id="data"></h3>
+    </div>
+
+    <script>
+        let username = "demo1123"
+        let password = "demo1123@345"
+
+        let data = document.getElementById("data")
+        
+        
+        function login() {
+            let uname = document.getElementById("uname")
+            let pwd = document.getElementById("pwd")
+            uname = uname.value.trim()
+            pwd = pwd.value
+            if (uname == "") {
+                data.innerText = "Username is Required"
+                return false;
+            }
+
+            if (pwd == "") {
+                data.innerText = "Password is Required"
+                return false;
+            }
+
+            if (pwd.length < 8) {
+                data.innerText = "Password should be more than 8 characters"
+                return false;
+            }
+
+            if (uname == username && pwd == password)
+                data.innerText = "Login Successfull"
+            else
+                data.innerText = "Invalid Credentials"
+
+        }
+    </script>
+</body>
+
+</html>
