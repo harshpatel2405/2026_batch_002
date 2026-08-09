@@ -1,0 +1,5 @@
+Mouse , Keyboard , click
+
+Mouse Events: click, dblclick, mouseenter, mouseleave, mousemove 
+Keyboard Events: keydown, keyup, keypress
+Form Events: submit, change, input, focus, blur

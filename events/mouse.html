@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onmouseenter="callMouse1()">mouse Enter</button>
+    <button onmouseleave="callMouse2()">mouse Leave</button>
+    <button onmouseup="callMouse3()">mouse Up</button>
+    <button onmousedown="callMouse4()">mouse down</button>
+    <button onmousemove="callMouse5(event)">mouse move</button>
+
+    <script>
+        function callMouse1() {
+            console.log("On Mouse Enter called..")
+        }
+        function callMouse2() {
+            console.log("On Mouse Leave called..")
+        }
+        function callMouse3() {
+            console.log("On Mouse Up called..")
+        }
+        function callMouse4() {
+            console.log("On Mouse down called..")
+        }
+        function callMouse5(event) {
+            console.log("On Mouse move called..")
+            // console.log(event.clientX)
+            // console.log(event.clientY)
+        }
+    </script>
+</body>
+
+</html>

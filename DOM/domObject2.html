@@ -8,160 +8,192 @@
 </head>
 
 <body>
+    <h1>Harsh</h1>
     <label>How Many data you want to print ? : </label><input type="number" id="num">
     <button onclick="getData()" type="button">Submit</button>
     <div id="data"></div>
 
     <script>
         const data = [
-    {
-        id: 1,
-        productName: "Smart TV",
-        price: 59999,
-        color: "Black",
-        modelNo: 1522,
-    },
-    {
-        id: 2,
-        productName: "Laptop",
-        price: 74999,
-        color: "Silver",
-        modelNo: 2045,
-    },
-    {
-        id: 3,
-        productName: "Smartphone",
-        price: 35999,
-        color: "Blue",
-        modelNo: 3187,
-    },
-    {
-        id: 4,
-        productName: "Wireless Headphones",
-        price: 4999,
-        color: "White",
-        modelNo: 4561,
-    },
-    {
-        id: 5,
-        productName: "Tablet",
-        price: 28999,
-        color: "Gray",
-        modelNo: 5012,
-    },
-    {
-        id: 6,
-        productName: "Smart Watch",
-        price: 12999,
-        color: "Black",
-        modelNo: 6148,
-    },
-    {
-        id: 7,
-        productName: "Bluetooth Speaker",
-        price: 6999,
-        color: "Red",
-        modelNo: 7284,
-    },
-    {
-        id: 8,
-        productName: "Gaming Mouse",
-        price: 2499,
-        color: "Black",
-        modelNo: 8345,
-    },
-    {
-        id: 9,
-        productName: "Mechanical Keyboard",
-        price: 5499,
-        color: "White",
-        modelNo: 9462,
-    },
-    {
-        id: 10,
-        productName: "Monitor",
-        price: 18999,
-        color: "Black",
-        modelNo: 1056,
-    },
-    {
-        id: 11,
-        productName: "Printer",
-        price: 8999,
-        color: "White",
-        modelNo: 1123,
-    },
-    {
-        id: 12,
-        productName: "Webcam",
-        price: 3999,
-        color: "Black",
-        modelNo: 1267,
-    },
-    {
-        id: 13,
-        productName: "External Hard Drive",
-        price: 6499,
-        color: "Blue",
-        modelNo: 1375,
-    },
-    {
-        id: 14,
-        productName: "USB Flash Drive",
-        price: 999,
-        color: "Silver",
-        modelNo: 1489,
-    },
-    {
-        id: 15,
-        productName: "Router",
-        price: 3499,
-        color: "White",
-        modelNo: 1596,
-    },
-    {
-        id: 16,
-        productName: "Projector",
-        price: 45999,
-        color: "Black",
-        modelNo: 1648,
-    },
-    {
-        id: 17,
-        productName: "DSLR Camera",
-        price: 69999,
-        color: "Black",
-        modelNo: 1785,
-    },
-    {
-        id: 18,
-        productName: "Power Bank",
-        price: 1999,
-        color: "Blue",
-        modelNo: 1832,
-    },
-    {
-        id: 19,
-        productName: "Air Conditioner",
-        price: 42999,
-        color: "White",
-        modelNo: 1947,
-    },
-    {
-        id: 20,
-        productName: "Refrigerator",
-        price: 55999,
-        color: "Silver",
-        modelNo: 2054,
-    }
-];
+            {
+                id: 1,
+                productName: "Smart TV",
+                price: 59999,
+                color: "Black",
+                modelNo: 1522,
+            },
+            {
+                id: 2,
+                productName: "Laptop",
+                price: 74999,
+                color: "Silver",
+                modelNo: 2045,
+            },
+            {
+                id: 3,
+                productName: "Smartphone",
+                price: 35999,
+                color: "Blue",
+                modelNo: 3187,
+            },
+            {
+                id: 4,
+                productName: "Wireless Headphones",
+                price: 4999,
+                color: "White",
+                modelNo: 4561,
+            },
+            {
+                id: 5,
+                productName: "Tablet",
+                price: 28999,
+                color: "Gray",
+                modelNo: 5012,
+            },
+            {
+                id: 6,
+                productName: "Smart Watch",
+                price: 12999,
+                color: "Black",
+                modelNo: 6148,
+            },
+            {
+                id: 7,
+                productName: "Bluetooth Speaker",
+                price: 6999,
+                color: "Red",
+                modelNo: 7284,
+            },
+            {
+                id: 8,
+                productName: "Gaming Mouse",
+                price: 2499,
+                color: "Black",
+                modelNo: 8345,
+            },
+            {
+                id: 9,
+                productName: "Mechanical Keyboard",
+                price: 5499,
+                color: "White",
+                modelNo: 9462,
+            },
+            {
+                id: 10,
+                productName: "Monitor",
+                price: 18999,
+                color: "Black",
+                modelNo: 1056,
+            },
+            {
+                id: 11,
+                productName: "Printer",
+                price: 8999,
+                color: "White",
+                modelNo: 1123,
+            },
+            {
+                id: 12,
+                productName: "Webcam",
+                price: 3999,
+                color: "Black",
+                modelNo: 1267,
+            },
+            {
+                id: 13,
+                productName: "External Hard Drive",
+                price: 6499,
+                color: "Blue",
+                modelNo: 1375,
+            },
+            {
+                id: 14,
+                productName: "USB Flash Drive",
+                price: 999,
+                color: "Silver",
+                modelNo: 1489,
+            },
+            {
+                id: 15,
+                productName: "Router",
+                price: 3499,
+                color: "White",
+                modelNo: 1596,
+            },
+            {
+                id: 16,
+                productName: "Projector",
+                price: 45999,
+                color: "Black",
+                modelNo: 1648,
+            },
+            {
+                id: 17,
+                productName: "DSLR Camera",
+                price: 69999,
+                color: "Black",
+                modelNo: 1785,
+            },
+            {
+                id: 18,
+                productName: "Power Bank",
+                price: 1999,
+                color: "Blue",
+                modelNo: 1832,
+            },
+            {
+                id: 19,
+                productName: "Air Conditioner",
+                price: 42999,
+                color: "White",
+                modelNo: 1947,
+            },
+            {
+                id: 20,
+                productName: "Refrigerator",
+                price: 55999,
+                color: "Silver",
+                modelNo: 2054,
+            }
+        ];
         function getData() {
             let div = document.getElementById("data")
             let table = document.createElement("table")
 
-            let limit = document.getElementById("num")
+            let headerRow = document.createElement("tr");
+            let header1 = document.createElement("th");
+            header1.innerText = "ID";
+            let header2 = document.createElement("th");
+            header2.innerText = "Name";
+            let header3 = document.createElement("th");
+            header3.innerText = "Price";
+            let header4 = document.createElement("th");
+            header4.innerText = "Color";
+            let header5 = document.createElement("th");
+            header5.innerText = "Model No";
 
-            for (let i = 0; i < limit.value; i++) {
+            headerRow.appendChild(header1);
+            headerRow.appendChild(header2);
+            headerRow.appendChild(header3);
+            headerRow.appendChild(header4);
+            headerRow.appendChild(header5);
+
+            table.appendChild(headerRow)
+
+
+            let limit = Number(document.getElementById("num").value);
+
+            if (limit > data.length || limit <= 0) {
+                let warning = document.createElement("h2");
+                warning.innerText = limit > data.length ? "Length should be less than " + data.length : "Length should be greater than 0"
+                warning.style.color = "red"
+                div.innerHTML = ""
+                div.appendChild(warning)
+                return
+            }
+
+            console.log(limit)
+            for (let i = 0; i < parseInt(limit); i++) {
 
                 let row = document.createElement("tr")
                 let id = document.createElement("td")
@@ -182,10 +214,22 @@
                 row.appendChild(modelNo)
 
                 table.appendChild(row)
-                table.setAttribute('border',2)
+
             }
 
+            table.setAttribute('border', 1)
+            table.style.border = "2px solid black";
+            table.style.borderCollapse = "collapse";
+            table.style.width = "80%";
+            table.style.margin = "20px auto";
+            table.style.backgroundColor = "#f8f9fa";
+            table.style.color = "#333";
+            table.style.fontFamily = "Arial";
+            table.style.fontSize = "16px";
+            table.style.textAlign = "center";
+            table.style.boxShadow = "0 0 10px rgba(0,0,0,0.2)";
 
+            div.innerHTML = ""
             div.appendChild(table)
 
         }

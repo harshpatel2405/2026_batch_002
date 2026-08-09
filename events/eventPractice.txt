@@ -1,0 +1,72 @@
+JavaScript Mouse Events – Mid-Level Practice
+
+Question: Interactive Product Card
+
+Create an Interactive Product Card using HTML, CSS, and JavaScript.
+
+The card should contain:
+- Product image
+- Product name
+- Price
+- "Add to Cart" button
+- Status message
+- Cart counter
+
+Requirements:
+
+1. mouseenter
+When the mouse enters the product card:
+- Increase the card size slightly.
+- Display "Viewing Product".
+
+2. mouseleave
+When the mouse leaves the product card:
+- Restore the original card size.
+- Clear the status message.
+
+3. mousemove
+When the mouse moves inside the card:
+- Display the current mouse position.
+
+Example:
+Mouse X: 120
+Mouse Y: 85
+
+4. mousedown
+When the user presses the "Add to Cart" button:
+- Change the button text to "Adding..."
+
+5. mouseup
+When the mouse is released:
+- Change the button text to "Added to Cart".
+- Increase the cart counter by 1.
+- Display "Product added successfully!"
+
+6. dblclick
+When the product image is double-clicked:
+- Toggle a "Favorite ❤️" status.
+
+
+Conditions:
+- Use addEventListener().
+- Do not use inline events like onclick.
+- Use at least 5 different mouse events.
+- Do not use alert().
+- Update the UI dynamically using JavaScript.
+
+Expected UI:
+
+┌─────────────────────────────┐
+│                             │
+│        PRODUCT IMAGE        │
+│                             │
+│   Laptop                    │
+│   ₹55,000                   │
+│                             │
+│   [ Add to Cart ]           │
+│                             │
+│   Viewing Product           │
+│   Mouse X: 120 Y: 85        │
+└─────────────────────────────┘
+
+Cart: 2
