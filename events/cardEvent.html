@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container
+        {
+            display:flex;
+        }
+        #box1 {
+            width: 425px;
+            height: 500px;
+            border: 3px solid blue;
+            background-color: rgb(181, 181, 181);
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='container' onmousemove="getDimension(event)">
+        <div id="box1">
+            <img src="https://www.apple.com/v/macbook-pro/ax/images/overview/welcome/hero_endframe__fwev9ebh42mq_xlarge.jpg"
+                height="400px">
+            <b>Name : Mac Book</b>
+            <br>
+            <b>Price : 129459 </b>
+            <button onclick="getdata()" >Add to cart</button>
+
+            <p id="status"></p>
+            <p id="dimension"></p>
+        </div>
+        <div id="cart">Cart : 0</div>
+    </div>
+
+    <script>
+        let status = document.getElementById('status')
+        let cart =document.getElementById('cart');
+        let dimension =document.getElementById('dimension');
+        let counter = 0;
+        function getdata()
+        {
+            status.innerText = 'Added to Cart'
+            counter++;
+            cart.innerHTML = 'Cart : ' + counter
+        }
+        function getDimension(event)
+        {
+            dimension.innerText = "X : " + event.clientX +"\nY : " + event.clientY
+        }
+    </script>
+</body>
+
+</html>
