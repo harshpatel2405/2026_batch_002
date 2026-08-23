@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #data {
+            width: 300px;
+            border: 2px solid red;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PREPEND </h1>
+    <button onclick="data1()">Prepend/</button>
+    <button onclick="data2()">AppendChild</button>
+    <button onclick="data3()">Append</button>
+    <button onclick="data4()">Before</button>
+    <button onclick="data5()">After</button>
+    <button onclick="data6()">Insert Before</button>
+    <button onclick="data7()">Remove</button>
+    <button onclick="data8()">Remove child</button>
+
+    <div id="data">
+
+        <h5>Second</h5>
+        <h5>Third</h5>
+        <h5 id="four">Four</h5>
+        <h5>Five</h5>
+    </div>
+    <script>
+        let data = document.querySelector("#data")
+        let four = document.querySelector("#four")
+        function data1() {
+            let heading = document.createElement("h5")
+            heading.innerText = "First"
+
+            data.prepend(heading)
+        }
+        function data2() {
+            let heading = document.createElement("h5")
+            let heading2 = document.createElement("h5")
+            heading.innerText = "Four"
+            heading2.innerText = "Five"
+            heading.setAttribute('id', "four");
+
+            // data.appendChild(heading, heading2)
+            // data.appendChild("Mr. " + heading)
+            data.appendChild(heading)
+        }
+        function data3() {
+            let heading = document.createElement("h5")
+            let heading2 = document.createElement("h5")
+            heading.innerText = "Four"
+            heading2.innerText = "Five"
+
+            data.append(heading, heading2)
+            // data.append("Mr. " , heading)
+            // data.append(heading)
+        }
+
+        function data4() {
+            let heading = document.createElement("h5")
+            heading.innerText = "Before is used "
+
+            data.before(heading)
+        }
+
+        function data5() {
+            let heading = document.createElement("h5")
+            heading.innerText = "After is used"
+
+            data.after(heading)
+        }
+
+        let count = 1;
+        function data6() {
+            let heading = document.createElement("h5")
+            heading.innerText = "Added Before with insert before " + count++
+            console.log(four.getAttribute('id'))
+
+            data.insertBefore(heading, four)
+
+        }
+
+        function data7() {
+            four.remove()
+        }
+        function data8() {
+            data.removeChild(four)
+        }
+    </script>
+</body>
+
+</html>

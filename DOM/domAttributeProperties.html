@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table cellspacing="10">
+        <tr>
+            <td>RAM</td>
+            <td>10000$</td>
+            <td>Ayodhya</td>
+        </tr>
+    </table>
+
+    <button onclick="add()">Add Border</button>
+    <button onclick="removeAttribute()">Remove Cellspacing</button>
+
+    <script>
+        let table = document.querySelector("table")
+        function add() {
+            let px = parseInt(prompt("Enter px : "))
+            let color = prompt("Enter Color : ");
+            table.setAttribute('border', px)
+            table.style.borderColor = color
+
+            console.log("Border : ", table.getAttribute('border'))
+            console.log("Border : ", table.hasAttribute('border'))
+
+        }
+
+        function removeAttribute() {
+            table.removeAttribute('cellspacing')
+        }       
+    </script>
+</body>
+
+</html>
