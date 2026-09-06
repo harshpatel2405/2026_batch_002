@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Game</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 400px;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .box h2 {
+            margin-bottom: 25px;
+        }
+
+        .box label {
+            margin-left: 8px;
+        }
+
+        .box button {
+            margin-top: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="box">
+
+            <h2>Quiz Game</h2>
+
+            <p>Test your JavaScript knowledge</p>
+
+            <b>Click below to start the quiz</b>
+
+            <br><br>
+
+            <button id="playbtn">Play Now</button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let playbtn = document.querySelector("#playbtn");
+        let box = document.querySelector(".box");
+        let score = 0;
+        // j = question number
+        let j = 0;
+
+        let exam = [
+            {
+                question: "Javascript is same as java",
+                options: ["True", "False"],
+                correctChoice: "False"
+            },
+            {
+                question: "Termination in JS can be done using",
+
+                options: [".", ";", ":", "?"],
+
+                correctChoice: ";"
+            },
+
+            {
+                question: "Which keyword is used to declare a variable in JavaScript?",
+                options: ["var", "int", "string", "float"],
+                correctChoice: "var" 
+            }
+        ];
+
+        // PLAY BUTTON
+        playbtn.addEventListener("click", function () {
+
+            // box.innerHTML = ""; 
+
+            showQuestion();
+
+        });
+
+
+        // FUNCTION TO DISPLAY QUESTION
+        function showQuestion() {
+
+            box.innerHTML = "";
+
+
+            // Get current question
+            let question = exam[j]["question"];
+
+            let options = exam[j]["options"];
+
+            let correctChoice = exam[j]["correctChoice"];
+
+
+            // =========================
+            // QUESTION
+            // =========================
+
+            let ques = document.createElement("h2");
+
+            ques.innerHTML = question;
+
+            box.appendChild(ques);
+
+
+            // =========================
+            // OPTIONS
+            // =========================
+
+            for (let i = 0; i < options.length; i++) {
+
+                let option = document.createElement("input");
+
+                let label = document.createElement("label");
+
+
+                option.setAttribute("type", "radio");
+
+                option.setAttribute("value", options[i]);
+
+                option.setAttribute("name", "options");
+
+                option.setAttribute("class", "opte");
+
+
+                label.innerHTML = options[i];
+
+
+                box.append(option);
+
+                box.append(label);
+
+                box.append(document.createElement("br"));
+
+            }
+
+
+            // =========================
+            // BUTTON
+            // =========================
+
+            let submitButton = document.createElement("button");
+
+
+            if (j < exam.length - 1) {
+
+                submitButton.innerText = "Next";
+
+            }
+            else {
+
+                submitButton.innerText = "Submit The Quiz";
+
+            }
+
+
+            box.appendChild(submitButton);
+
+
+            // =========================
+            // BUTTON CLICK
+            // =========================
+
+            submitButton.addEventListener("click", function () {
+
+
+                // Get all radio buttons
+                let opte = document.querySelectorAll(".opte");
+
+
+                // =========================
+                // CHECK ANSWER
+                // =========================
+
+                for (let i = 0; i < opte.length; i++) {
+
+                    if (opte[i].checked) {
+
+                        if (opte[i].value == correctChoice) {
+
+                            score++;
+
+                        }
+
+                        break;
+
+                    }
+
+                }
+
+
+                // =========================
+                // NEXT QUESTION
+                // =========================
+
+                if (j < exam.length - 1) {
+
+                    j++;
+
+                    showQuestion();
+
+                }
+
+
+                // =========================
+                // LAST QUESTION
+                // =========================
+
+                else {
+
+                    box.innerHTML = "";
+
+
+                    let scoreHeading = document.createElement("h1");
+
+                    scoreHeading.innerHTML =
+                        "Score : " + score + " / " + exam.length;
+
+
+                    box.appendChild(scoreHeading);
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
