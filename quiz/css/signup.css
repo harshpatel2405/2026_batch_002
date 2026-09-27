@@ -1,0 +1,311 @@
+/* =========================
+   Global Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   Body
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg,
+            #eef2ff,
+            #f8fafc);
+
+    color: #1e293b;
+}
+
+
+/* =========================
+   Navbar Container
+========================= */
+
+#navbar {
+    width: 100%;
+}
+
+
+/* =========================
+   Signup Container
+========================= */
+
+.signup-box {
+    width: 420px;
+    max-width: calc(100% - 40px);
+
+    margin: 60px auto 40px;
+
+    padding: 35px;
+
+    background-color: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+/* =========================
+   Success Toast
+========================= */
+
+.toast {
+    position: fixed;
+
+    top: 90px;
+    right: 30px;
+
+    padding: 15px 22px;
+
+    
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(100px);
+
+    transition: 0.3s ease;
+}
+
+
+/* Show Toast */
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+
+    background-color: #16a34a;
+    color: white;
+}
+
+.toast.showerr {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+
+    background-color: #fa0202;
+    color: white;
+}
+/* =========================
+   Signup Heading
+========================= */
+
+.signup-box h2 {
+    text-align: center;
+
+    margin-bottom: 8px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #1e293b;
+}
+
+
+/* =========================
+   Subtitle
+========================= */
+
+.subtitle {
+    text-align: center;
+
+    margin-bottom: 28px;
+
+    font-size: 14px;
+
+    color: #64748b;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   Form Group
+========================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   Labels
+========================= */
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #334155;
+}
+
+
+/* =========================
+   Input and Select
+========================= */
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+
+    font-size: 15px;
+
+    color: #1e293b;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================
+   Placeholder
+========================= */
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* =========================
+   Input Focus
+========================= */
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+
+/* =========================
+   Select
+========================= */
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+/* =========================
+   Submit Button
+========================= */
+
+button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #4f46e5;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================
+   Button Hover
+========================= */
+
+button:hover {
+    background-color: #3730a3;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px rgba(79, 70, 229, 0.25);
+}
+
+
+/* =========================
+   Button Active
+========================= */
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width: 480px) {
+
+    .signup-box {
+        max-width: calc(100% - 30px);
+
+        margin-top: 40px;
+
+        padding: 25px 20px;
+
+        border-radius: 12px;
+    }
+
+    .signup-box h2 {
+        font-size: 25px;
+    }
+
+    .subtitle {
+        margin-bottom: 24px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 11px 12px;
+    }
+
+    button {
+        padding: 12px;
+    }
+}

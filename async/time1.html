@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Clock</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111827;
+            font-family: Arial, sans-serif;
+        }
+
+        body > div:first-of-type {
+            background: #1f2937;
+            padding: 30px 50px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            margin: 10px 0;
+            color: white;
+            font-size: 24px;
+        }
+
+        body > div:last-of-type {
+            position: absolute;
+            margin-top: 250px;
+        }
+
+        #d4 {
+            background: black;
+            color: #00ff88;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 32px;
+            letter-spacing: 3px;
+            font-family: monospace;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h2 id="d1"></h2>
+        <h2 id="d2"></h2>
+        <h2 id="d3"></h2>
+    </div>
+
+    <div>
+        <h4 id="d4"></h4>
+    </div>
+
+    <script>
+        let d1 = document.querySelector("#d1")
+        let d2 = document.querySelector("#d2")
+        let d3 = document.querySelector("#d3")
+        let d4 = document.querySelector("#d4")
+
+        function showClock() {
+            let now = new Date()
+
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            let slot = hours > 12 ? "PM" : "AM"
+
+            d1.innerHTML = "Hour : " + hours;
+            d2.innerHTML = "Minutes : " + minutes;
+            d3.innerHTML = "Seconds : " + seconds;
+
+            if (hours > 12) {
+                hours -= 12;
+            }
+
+            d4.innerHTML =
+                hours + " :: " +
+                minutes + " :: " +
+                seconds + " " +
+                slot;
+        }
+
+        showClock();
+        setInterval(showClock, 1000);
+    </script>
+
+</body>
+
+</html>

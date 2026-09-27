@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <title>Sign Up</title>
+
+
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <!-- * Signup Card -->
+    <div class="signup-box">
+        <h2>Sign Up</h2>
+        <p class="subtitle">
+            Enter your details to register
+        </p>
+        <!-- Signup Form -->
+        <form id="signupForm">
+
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Name</label>
+
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Batch Field -->
+            <div class="form-group">
+                <label for="batch">Batch</label>
+
+                <select id="batch" name="batch" required>
+
+                    <option value="">Select Batch</option>
+
+                    <option value="One to One"> One to One </option>
+                    <option value="GEN 40">GEN 40 </option>
+                    <option value="GEN 200">GEN 200 </option>
+                    <option value="Club"> Club </option>
+
+                </select>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit">
+                Sign Up
+            </button>
+        </form>
+    </div>
+    <!-- Signup Success Toast -->
+    <div id="toast" class="toast">
+        
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/signup.js"></script>
+
+</body>
+
+</html>
