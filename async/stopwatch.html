@@ -92,6 +92,16 @@
             background: #00e676;
             box-shadow: 0 8px 20px rgba(0, 230, 118, 0.4);
         }
+        /* ========================= START ========================= */
+        #btn4 {
+            background: #ff0000;
+            box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
+        }
+
+        #btn4:hover {
+            background: #0800e6;
+            box-shadow: 0 8px 20px rgba(0, 230, 118, 0.4);
+        }
 
         /* ========================= RESET ========================= */
         #btn2 {
@@ -210,8 +220,12 @@
     <div class="stopwatch">
         <h1>⏱ Stopwatch</h1>
         <h2 id="data">0 :: 0 :: 0</h2>
-        <div class="buttons"> <button id="btn1"> Start </button> <button id="btn2"> Reset </button> <button id="btn3">
-                Lap </button> </div>
+        <div class="buttons"> 
+            <button id="btn1"> Start </button>
+            <button id="btn2"> Reset </button>
+            <button id="btn3">Lap </button>
+            <button id="btn4"> Stop </button>
+        </div>
         <div id="laps"> </div>
     </div>
     <script> let data = document.querySelector("#data")
@@ -224,12 +238,13 @@
             let minutes = Math.floor((seconds % 3600) / 60)
             let sec = seconds % 60
             data.innerHTML = hours + " :: " + minutes + " :: " + sec
-            seconds++
+            ++seconds
             if (seconds >= 15) { clearInterval(timer) }
         }
         let button1 = document.getElementById("btn1")
         let button2 = document.getElementById("btn2")
         let button3 = document.getElementById("btn3")
+        let button4 = document.getElementById("btn4")
         // START 
         button1.addEventListener("click", () => { timer = setInterval(stopwatch, 1000) })
 
@@ -250,6 +265,11 @@
             bold1.innerHTML = "<span>Lap " + count++ + "</span>" + "<span>" + hours + " :: " + minutes + " :: " + sec + "</span>"
             laps.append(bold1)
         }) 
+
+        button4.addEventListener('click',()=>{
+            clearInterval(timer)
+            
+        })
     </script>
 </body>
 
